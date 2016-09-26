@@ -1,7 +1,7 @@
-counter = 100 # 赋值整型变量
-miles = 1000.0 # 浮点型
-name = "John" # 字符串
+x = "too "
+y = "too "
+x + "young"
+print(id(x))
+print(id(y))
+print(type(x))
 
-print (counter)
-print (miles)
-print (name)
