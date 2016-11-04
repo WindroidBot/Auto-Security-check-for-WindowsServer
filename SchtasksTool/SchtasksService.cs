@@ -147,8 +147,7 @@ namespace SchtasksTool
             this.action = action;
             fileName = "schtasks_" + serviceName;
             batPath = "D:\\" + fileName + ".bat";
-            this.startTime = startTime;
-            
+            this.startTime = startTime;            
         }
         #endregion
 

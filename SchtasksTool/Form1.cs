@@ -40,9 +40,26 @@ namespace SchtasksTool
         private void button_CreateSchtasks_Click(object sender, EventArgs e)
         {
             SchtasksService Schtasks1 = new SchtasksService(textBox_SchtasksName.Text, textBox_ServiceName.Text,
-                "HOURLY", textBox_Periodic.Text, comboBox_Action.Text, comboBox_StartH.Text + ":" + comboBox_StartM.Text);
-            Console.WriteLine(comboBox_StartH.Text);
-            Console.WriteLine(comboBox_StartM.Text);
+                comboBox_PeriodicUnit.Text, textBox_Periodic.Text, comboBox_Action.Text, comboBox_StartH.Text + ":" + comboBox_StartM.Text);
+            string temp = comboBox_PeriodicUnit.Text;
+            switch (temp)
+            {
+                case "分钟":
+                    Schtasks1.PeriodicUnit = "MINUTE";
+                    break;
+                case "小时":
+                    Schtasks1.PeriodicUnit = "HOURLY";
+                    break;
+                case "天":
+                    Schtasks1.PeriodicUnit = "DAILY";
+                    break;
+                case "周":
+                    Schtasks1.PeriodicUnit = "WEEKLY";
+                    break;
+                case "月":
+                    Schtasks1.PeriodicUnit = "MONTHLY";
+                    break;
+            }
             Schtasks1.CreateSchtasks_RestartService();
         }
     }
