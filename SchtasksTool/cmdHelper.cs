@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace SchtasksTool
 {
@@ -11,7 +12,7 @@ namespace SchtasksTool
     {
         private static string CmdPath = @"C:\Windows\System32\cmd.exe";
         /// <summary>
-        /// 执行命令并返回结果
+        /// 执行cmd命令
         /// </summary>
         /// <param name="cmd">执行语句</param>
         /// <param name="output">结果的委托</param>
@@ -48,6 +49,32 @@ namespace SchtasksTool
         {
             RunCmd(cmd, out output);
             FileHelper.WriteFile(path, output);
+        }
+
+        /// <summary>
+        /// 执行bat脚本
+        /// </summary>
+        /// <param name="path">脚本路径</param>
+        /// <returns></returns>
+        public static bool RunBat(string path)
+        {
+            Process proc = null;
+            try
+            {
+                proc = new Process();
+                proc.StartInfo.FileName = path;
+                proc.StartInfo.Arguments = string.Format("10");//this is argument
+                proc.StartInfo.CreateNoWindow = false;
+                proc.Start();
+                proc.WaitForExit();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Exception Occurred :{0},{1}", ex.Message, ex.StackTrace.ToString());
+                MessageBox.Show("脚本执行失败！","粗错了辣", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            return true;
         }
     }
 }

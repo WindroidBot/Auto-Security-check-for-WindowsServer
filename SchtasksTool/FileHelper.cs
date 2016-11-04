@@ -36,5 +36,23 @@ namespace SchtasksTool
                 Directory.CreateDirectory(@"D:/检查日志");
             }
         }
+
+        /// <summary>
+        /// 创建bat文件并写入脚本代码
+        /// </summary>
+        /// <param name="path">bat文件路径</param>
+        /// <param name="ScriptStr">脚本代码</param>
+        public static void CreateBat(string path,string ScriptStr)
+        {
+            FileStream fs = new FileStream(path, FileMode.Create);
+            StreamWriter sw = new StreamWriter(fs);
+            //开始写入
+            sw.Write(ScriptStr);
+            //清空缓冲区
+            sw.Flush();
+            //关闭流
+            sw.Close();
+            fs.Close();
+        }
     }
 }
