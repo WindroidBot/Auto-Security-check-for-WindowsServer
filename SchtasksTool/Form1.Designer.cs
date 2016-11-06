@@ -128,6 +128,7 @@
             // 
             // button_DeleteSchtasks
             // 
+            this.button_DeleteSchtasks.Enabled = false;
             this.button_DeleteSchtasks.Location = new System.Drawing.Point(431, 248);
             this.button_DeleteSchtasks.Name = "button_DeleteSchtasks";
             this.button_DeleteSchtasks.Size = new System.Drawing.Size(86, 23);
@@ -147,6 +148,7 @@
             // 
             // button_Test
             // 
+            this.button_Test.Enabled = false;
             this.button_Test.Location = new System.Drawing.Point(543, 248);
             this.button_Test.Name = "button_Test";
             this.button_Test.Size = new System.Drawing.Size(86, 23);
