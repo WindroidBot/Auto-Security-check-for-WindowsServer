@@ -8,14 +8,40 @@ namespace SchtasksTool
 {
     class SchtasksService
     {
-        private string fileName;//bat文件名
-        private string schtasksName;//计划任务名
-        private string serviceName;//服务名
-        private string periodicUnit;//周期单位
-        private string periodic;//周期
-        private string startTime;//初次执行时间
+        #region 属性
+        /// <summary>
+        /// bat文件名
+        /// </summary>
+        private string fileName;
+        /// <summary>
+        /// 计划任务名
+        /// </summary>
+        private string schtasksName;
+        /// <summary>
+        /// 服务名
+        /// </summary>
+        private string serviceName;
+        /// <summary>
+        /// 周期单位
+        /// </summary>
+        private string periodicUnit;
+        /// <summary>
+        /// 周期
+        /// </summary>
+        private string periodic;
+        /// <summary>
+        /// 初次执行时间
+        /// </summary>
+        private string startTime;
+        /// <summary>
+        /// 执行动作
+        /// </summary>
         private string action;//执行动作
-        private string batPath;//脚本路径，格式以cmd中格式为准
+        /// <summary>
+        /// 脚本路径，格式以cmd中格式为准
+        /// </summary>
+        private string batPath;
+        #endregion
 
         #region 访问器方法
         public string ServiceName
@@ -149,7 +175,7 @@ namespace SchtasksTool
             this.periodic = periodic;
             this.action = action;
             fileName = "schtasks_" + serviceName;
-            batPath = "D:\\" + fileName + ".bat";
+            batPath = "C:\\" + fileName + ".bat";
             this.startTime = startTime;            
         }
         #endregion
@@ -180,6 +206,8 @@ namespace SchtasksTool
             cmdHelper.RunCmd(CreateSchtasks, out output);//添加计划任务
             return true;
         }
+
+
 
 
 

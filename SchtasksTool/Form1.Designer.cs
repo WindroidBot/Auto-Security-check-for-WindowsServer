@@ -121,14 +121,14 @@
             // 
             this.listBox_Schtasks.FormattingEnabled = true;
             this.listBox_Schtasks.ItemHeight = 12;
-            this.listBox_Schtasks.Location = new System.Drawing.Point(626, 167);
+            this.listBox_Schtasks.Location = new System.Drawing.Point(431, 46);
             this.listBox_Schtasks.Name = "listBox_Schtasks";
-            this.listBox_Schtasks.Size = new System.Drawing.Size(120, 88);
+            this.listBox_Schtasks.Size = new System.Drawing.Size(198, 196);
             this.listBox_Schtasks.TabIndex = 7;
             // 
             // button_DeleteSchtasks
             // 
-            this.button_DeleteSchtasks.Location = new System.Drawing.Point(660, 261);
+            this.button_DeleteSchtasks.Location = new System.Drawing.Point(431, 248);
             this.button_DeleteSchtasks.Name = "button_DeleteSchtasks";
             this.button_DeleteSchtasks.Size = new System.Drawing.Size(86, 23);
             this.button_DeleteSchtasks.TabIndex = 8;
@@ -143,12 +143,13 @@
             this.button_OpenSchtasks.TabIndex = 9;
             this.button_OpenSchtasks.Text = "打开Windows计划任务管理器";
             this.button_OpenSchtasks.UseVisualStyleBackColor = true;
+            this.button_OpenSchtasks.Click += new System.EventHandler(this.button_OpenSchtasks_Click);
             // 
             // button_Test
             // 
-            this.button_Test.Location = new System.Drawing.Point(626, 87);
+            this.button_Test.Location = new System.Drawing.Point(543, 248);
             this.button_Test.Name = "button_Test";
-            this.button_Test.Size = new System.Drawing.Size(86, 27);
+            this.button_Test.Size = new System.Drawing.Size(86, 23);
             this.button_Test.TabIndex = 10;
             this.button_Test.Text = "功能测试按钮";
             this.button_Test.UseVisualStyleBackColor = true;
@@ -337,7 +338,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(837, 357);
+            this.ClientSize = new System.Drawing.Size(654, 354);
             this.Controls.Add(this.label_min);
             this.Controls.Add(this.label_hour);
             this.Controls.Add(this.comboBox_StartM);
@@ -359,8 +360,10 @@
             this.Controls.Add(this.label_PeriodicUnit);
             this.Controls.Add(this.textBox_ServiceName);
             this.Controls.Add(this.label_ServiceName);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "计划任务辅助工具 Ver 1.0";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

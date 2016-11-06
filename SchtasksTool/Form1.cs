@@ -83,5 +83,10 @@ namespace SchtasksTool
         {
             System.Diagnostics.Process.Start("services.msc");
         }
+
+        private void button_OpenSchtasks_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("taskschd.msc");
+        }
     }
 }
