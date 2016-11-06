@@ -137,16 +137,16 @@
             // 
             // button_OpenSchtasks
             // 
-            this.button_OpenSchtasks.Location = new System.Drawing.Point(361, 270);
+            this.button_OpenSchtasks.Location = new System.Drawing.Point(192, 270);
             this.button_OpenSchtasks.Name = "button_OpenSchtasks";
-            this.button_OpenSchtasks.Size = new System.Drawing.Size(101, 50);
+            this.button_OpenSchtasks.Size = new System.Drawing.Size(168, 21);
             this.button_OpenSchtasks.TabIndex = 9;
             this.button_OpenSchtasks.Text = "打开Windows计划任务管理器";
             this.button_OpenSchtasks.UseVisualStyleBackColor = true;
             // 
             // button_Test
             // 
-            this.button_Test.Location = new System.Drawing.Point(581, 96);
+            this.button_Test.Location = new System.Drawing.Point(626, 87);
             this.button_Test.Name = "button_Test";
             this.button_Test.Size = new System.Drawing.Size(86, 27);
             this.button_Test.TabIndex = 10;
@@ -156,12 +156,13 @@
             // 
             // button_OpenServices
             // 
-            this.button_OpenServices.Location = new System.Drawing.Point(506, 270);
+            this.button_OpenServices.Location = new System.Drawing.Point(264, 46);
             this.button_OpenServices.Name = "button_OpenServices";
-            this.button_OpenServices.Size = new System.Drawing.Size(88, 50);
+            this.button_OpenServices.Size = new System.Drawing.Size(144, 21);
             this.button_OpenServices.TabIndex = 11;
             this.button_OpenServices.Text = "打开Windows服务管理器";
             this.button_OpenServices.UseVisualStyleBackColor = true;
+            this.button_OpenServices.Click += new System.EventHandler(this.button_OpenServices_Click);
             // 
             // label_Action
             // 
@@ -212,6 +213,7 @@
             // 
             // comboBox_StartH
             // 
+            this.comboBox_StartH.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_StartH.FormattingEnabled = true;
             this.comboBox_StartH.Items.AddRange(new object[] {
             "00",
@@ -245,6 +247,7 @@
             // 
             // comboBox_StartM
             // 
+            this.comboBox_StartM.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_StartM.FormattingEnabled = true;
             this.comboBox_StartM.Items.AddRange(new object[] {
             "00",

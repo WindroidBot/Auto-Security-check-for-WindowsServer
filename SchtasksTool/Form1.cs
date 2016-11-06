@@ -26,8 +26,8 @@ namespace SchtasksTool
             cmdHelper.RunBat(dir);
             */
 
-            SchtasksService test = new SchtasksService("aaaaa","secbizsrv", "HOURLY", "15", "aaa", "12:00");
-            test.CreateSchtasks_RestartService();
+            //SchtasksService test = new SchtasksService("aaaaa","secbizsrv", "HOURLY", "15", "aaa", "12:00");
+            //test.CreateSchtasks_RestartService();
             
         }
 
@@ -35,6 +35,8 @@ namespace SchtasksTool
         {
             comboBox_PeriodicUnit.SelectedIndex = 0;
             comboBox_Action.SelectedIndex = 2;
+            comboBox_StartH.SelectedIndex = 12;
+            comboBox_StartM.SelectedIndex = 30;
         }
 
         private void button_CreateSchtasks_Click(object sender, EventArgs e)
@@ -42,6 +44,7 @@ namespace SchtasksTool
             SchtasksService Schtasks1 = new SchtasksService(textBox_SchtasksName.Text, textBox_ServiceName.Text,
                 comboBox_PeriodicUnit.Text, textBox_Periodic.Text, comboBox_Action.Text, comboBox_StartH.Text + ":" + comboBox_StartM.Text);
             string temp = comboBox_PeriodicUnit.Text;
+            string temp2 = comboBox_Action.Text;
             switch (temp)
             {
                 case "分钟":
@@ -60,7 +63,25 @@ namespace SchtasksTool
                     Schtasks1.PeriodicUnit = "MONTHLY";
                     break;
             }
-            Schtasks1.CreateSchtasks_RestartService();
+            switch (temp2)
+            {
+                case "启动服务":
+                    Schtasks1.Action = "start";
+                    break;
+                case "停止服务":
+                    Schtasks1.Action = "stop";
+                    break;
+                case "重启服务":
+                    Schtasks1.Action = "restart";
+                    break;
+            }
+            //Schtasks1.CreateSchtasks_RestartService();
+            Schtasks1.CreateSchtasks(Schtasks1.Action);
+        }
+
+        private void button_OpenServices_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("services.msc");
         }
     }
 }

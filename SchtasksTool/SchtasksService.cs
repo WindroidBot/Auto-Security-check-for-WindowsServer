@@ -124,6 +124,9 @@ namespace SchtasksTool
         #endregion
 
         #region 构造方法
+        /// <summary>
+        /// SchtasksService构造方法
+        /// </summary>
         public SchtasksService()
         {
 
@@ -151,53 +154,35 @@ namespace SchtasksTool
         }
         #endregion
 
-        #region 创建计划任务
         /// <summary>
-        /// 创建重启服务计划任务
+        /// 创建计划任务
         /// </summary>
+        /// <param name="action">执行动作</param>
         /// <returns></returns>
-        public bool CreateSchtasks_RestartService()
+        public bool CreateSchtasks(string action)
         {
+            string batString=null;
+            switch (action)
+            {
+                case "start":
+                    batString = "sc start " + serviceName;
+                    break;
+                case "stop":
+                    batString = "sc stop " + serviceName;
+                    break;
+                case "restart":
+                    batString = "sc stop " + serviceName + "\r\n" + "sc start " + serviceName;
+                    break;
+            }
             string output = "";
-            string batString = "sc stop " + serviceName + "\r\n" + "sc start " + serviceName;
             string CreateSchtasks = @"schtasks /create /SC " + periodicUnit + @" /MO " + periodic + @" /TN " + schtasksName + @" /TR " + BatPath + @" /ST " + startTime;
-            Console.WriteLine(CreateSchtasks);
-            //string CreateSchtasks = @"schtasks /create /SC hourly /MO 6 /TN test /TR C:\Windows\System32\mspaint.exe /ST 12:00";
-            FileHelper.CreateBat(batPath, batString);//创建bat脚本
-            cmdHelper.RunCmd(CreateSchtasks,out output);//添加计划任务
-            return true;
-        }
-
-        /// <summary>
-        /// 创建停止服务计划任务
-        /// </summary>
-        /// <returns></returns>
-        public bool CreateSchtasks_StopService()
-        {
-            string output = "";
-            string batString = "sc stop " + serviceName ;
-            string CreateSchtasks = @"schtasks /create /SC " + periodicUnit + @" /MO " + periodic + @" /TN " + schtasksName + @" /TR " + BatPath + @" /ST " + startTime;
-            //string CreateSchtasks = @"schtasks /create /SC hourly /MO 6 /TN test /TR C:\Windows\System32\mspaint.exe /ST 12:00";
             FileHelper.CreateBat(batPath, batString);//创建bat脚本
             cmdHelper.RunCmd(CreateSchtasks, out output);//添加计划任务
             return true;
         }
 
-        /// <summary>
-        /// 创建启动服务计划任务
-        /// </summary>
-        /// <returns></returns>
-        public bool CreateSchtasks_StartService()
-        {
-            string output = "";
-            string batString = "sc start " + serviceName;
-            string CreateSchtasks = @"schtasks /create /SC " + periodicUnit + @" /MO " + periodic + @" /TN " + schtasksName + @" /TR " + BatPath + @" /ST " + startTime;
-            //string CreateSchtasks = @"schtasks /create /SC hourly /MO 6 /TN test /TR C:\Windows\System32\mspaint.exe /ST 12:00";
-            FileHelper.CreateBat(batPath, batString);//创建bat脚本
-            cmdHelper.RunCmd(CreateSchtasks, out output);//添加计划任务
-            return true;
-        }
-        #endregion
+
+
 
 
     }
