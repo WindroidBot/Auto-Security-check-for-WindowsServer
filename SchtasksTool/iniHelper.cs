@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
-using System.Text;
-using System.Runtime.InteropServices;
 
 namespace SchtasksTool
 {
@@ -20,39 +20,28 @@ namespace SchtasksTool
         #endregion
 
         /// <summary>
-        /// 创建ini文件
+        /// 创建ini配置文件
         /// </summary>
-        public static void create_ini()
+        /// <param name="fileName"></param>
+        /// <param name="schtasksName"></param>
+        /// <param name="serviceName"></param>
+        /// <param name="periodicUnit"></param>
+        /// <param name="periodic"></param>
+        /// <param name="action"></param>
+        /// <param name="startTime"></param>
+        public static void create_ini(string fileName, string schtasksName, string serviceName, 
+            string periodicUnit, string periodic,string startTime, string action)
         {
-            WritePrivateProfileString("TEST1", "ID", "22", @"C:\test.ini");
-            WritePrivateProfileString("TEST1", "NAME", "Windows", @"C:\test.ini");
-            WritePrivateProfileString("TEST2", "ID", "33", @"C:\test.ini");
-            WritePrivateProfileString("TEST2", "NAME", "Android", @"C:\test.ini");
-            Console.WriteLine("ini文件已创建");
-        }
-        /// <summary>
-        /// 读取ini字段值
-        /// </summary>
-        /// <param name="Section">节名</param>
-        /// <param name="key">键名</param>
-        /// <returns></returns>
-        public static string ContentValue(string Section, string key)
-        {
-
-            StringBuilder value = new StringBuilder(1024);
-            GetPrivateProfileString(Section, key, "", value, 1024, @"D:\test.ini");
-            return value.ToString();
+            WritePrivateProfileString(fileName, "schtasksName", schtasksName,"D:\\SchtasksService.ini");
+            WritePrivateProfileString(fileName, "serviceName", serviceName, "D:\\SchtasksService.ini");
+            WritePrivateProfileString(fileName, "periodicUnit", periodicUnit, "D:\\SchtasksService.ini");
+            WritePrivateProfileString(fileName, "periodic", periodic, "D:\\SchtasksService.ini");
+            WritePrivateProfileString(fileName, "startTime", action, "D:\\SchtasksService.ini");
+            WritePrivateProfileString(fileName, "action", startTime, "D:\\SchtasksService.ini");
+            WritePrivateProfileString(fileName, "batPath", "C:\\" + fileName + ".bat", "D:\\SchtasksService.ini");
+            File.SetAttributes("D:\\SchtasksService.ini", FileAttributes.Hidden); //设置为隐藏文件
         }
 
-        /// <summary>
-        /// 修改ini字段值
-        /// </summary>
-        /// <param name="Section">节名</param>
-        /// <param name="key">键名</param>
-        /// <param name="value">新的键值</param>
-        public static void update_ini(string Section, string key, string value)
-        {
-            WritePrivateProfileString(Section, key, value, @"D:\test.ini");
-        }
+
     }
 }

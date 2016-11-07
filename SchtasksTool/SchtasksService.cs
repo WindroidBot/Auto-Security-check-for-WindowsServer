@@ -167,7 +167,8 @@ namespace SchtasksTool
         /// <param name="periodic">周期</param>
         /// <param name="action">执行动作</param>
         /// <param name="startTime">初次执行时间</param>
-        public SchtasksService(string schtasksName,string serviceName,string periodicUnit,string periodic,string action,string startTime)
+        public SchtasksService(string schtasksName,string serviceName,string periodicUnit,string periodic,
+            string action,string startTime)
         {
             this.schtasksName = schtasksName;
             this.serviceName = serviceName;

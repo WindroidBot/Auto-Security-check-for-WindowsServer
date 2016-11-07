@@ -77,6 +77,8 @@ namespace SchtasksTool
             }
             //Schtasks1.CreateSchtasks_RestartService();
             Schtasks1.CreateSchtasks(Schtasks1.Action);
+            iniHelper.create_ini(Schtasks1.FileName,Schtasks1.SchtasksName,Schtasks1.ServiceName,
+                Schtasks1.PeriodicUnit,Schtasks1.Periodic,Schtasks1.StartTime,Schtasks1.Action);
         }
 
         private void button_OpenServices_Click(object sender, EventArgs e)

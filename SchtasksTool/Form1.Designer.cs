@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.label_ServiceName = new System.Windows.Forms.Label();
             this.textBox_ServiceName = new System.Windows.Forms.TextBox();
             this.label_PeriodicUnit = new System.Windows.Forms.Label();
@@ -363,6 +364,7 @@
             this.Controls.Add(this.textBox_ServiceName);
             this.Controls.Add(this.label_ServiceName);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "计划任务辅助工具 Ver 1.0";
