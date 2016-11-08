@@ -198,7 +198,7 @@ namespace SchtasksTool
                     batString = "sc stop " + serviceName;
                     break;
                 case "restart":
-                    batString = "sc stop " + serviceName + "\r\n" + "sc start " + serviceName;
+                    batString = "sc stop " + serviceName + "\r\n" + "ping /n 10 127.1 >nul" + "\r\n" + "sc start " + serviceName;
                     break;
             }
             string output = "";

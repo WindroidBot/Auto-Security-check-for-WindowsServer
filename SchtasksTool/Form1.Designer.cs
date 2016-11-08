@@ -51,6 +51,7 @@
             this.label_hour = new System.Windows.Forms.Label();
             this.label_min = new System.Windows.Forms.Label();
             this.button_About = new System.Windows.Forms.Button();
+            this.label_Tip = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label_ServiceName
@@ -348,11 +349,22 @@
             this.button_About.UseVisualStyleBackColor = true;
             this.button_About.Click += new System.EventHandler(this.button_About_Click);
             // 
+            // label_Tip
+            // 
+            this.label_Tip.AutoSize = true;
+            this.label_Tip.ForeColor = System.Drawing.Color.Red;
+            this.label_Tip.Location = new System.Drawing.Point(58, 305);
+            this.label_Tip.Name = "label_Tip";
+            this.label_Tip.Size = new System.Drawing.Size(149, 12);
+            this.label_Tip.TabIndex = 22;
+            this.label_Tip.Text = "同一服务只能创建一个任务";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(654, 354);
+            this.Controls.Add(this.label_Tip);
             this.Controls.Add(this.button_About);
             this.Controls.Add(this.label_min);
             this.Controls.Add(this.label_hour);
@@ -379,7 +391,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Form1";
-            this.Text = "计划任务辅助工具 Ver 1.0";
+            this.Text = "计划任务辅助工具 Ver 1.1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -410,6 +422,7 @@
         private System.Windows.Forms.Label label_hour;
         private System.Windows.Forms.Label label_min;
         private System.Windows.Forms.Button button_About;
+        private System.Windows.Forms.Label label_Tip;
     }
 }
 
