@@ -50,6 +50,7 @@
             this.comboBox_StartM = new System.Windows.Forms.ComboBox();
             this.label_hour = new System.Windows.Forms.Label();
             this.label_min = new System.Windows.Forms.Label();
+            this.button_About = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label_ServiceName
@@ -337,11 +338,22 @@
             this.label_min.TabIndex = 20;
             this.label_min.Text = "分";
             // 
+            // button_About
+            // 
+            this.button_About.Location = new System.Drawing.Point(543, 305);
+            this.button_About.Name = "button_About";
+            this.button_About.Size = new System.Drawing.Size(75, 23);
+            this.button_About.TabIndex = 21;
+            this.button_About.Text = "关于";
+            this.button_About.UseVisualStyleBackColor = true;
+            this.button_About.Click += new System.EventHandler(this.button_About_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(654, 354);
+            this.Controls.Add(this.button_About);
             this.Controls.Add(this.label_min);
             this.Controls.Add(this.label_hour);
             this.Controls.Add(this.comboBox_StartM);
@@ -397,6 +409,7 @@
         private System.Windows.Forms.ComboBox comboBox_StartM;
         private System.Windows.Forms.Label label_hour;
         private System.Windows.Forms.Label label_min;
+        private System.Windows.Forms.Button button_About;
     }
 }
 

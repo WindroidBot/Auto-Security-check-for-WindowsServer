@@ -90,5 +90,11 @@ namespace SchtasksTool
         {
             System.Diagnostics.Process.Start("taskschd.msc");
         }
+
+        private void button_About_Click(object sender, EventArgs e)
+        {
+            Form AboutBox = new AboutBox();
+            AboutBox.ShowDialog();
+        }
     }
 }
