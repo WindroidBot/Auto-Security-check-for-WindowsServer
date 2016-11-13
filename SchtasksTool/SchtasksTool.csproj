@@ -55,7 +55,7 @@
     <ApplicationIcon>Resources\Network_Service_128px_522352_easyicon.net.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
-    <SignManifests>true</SignManifests>
+    <SignManifests>false</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestCertificateThumbprint>84AA9CF079053F2C78E373B71ED836701CA02C9A</ManifestCertificateThumbprint>
