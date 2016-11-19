@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplication", "Conso
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchtasksTool", "SchtasksTool\SchtasksTool.csproj", "{218A5C84-4C2C-498E-AE79-1BA835B4FB2C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplication2", "ConsoleApplication2\ConsoleApplication2.csproj", "{D20D2C51-F54B-45EE-937E-EFEA0352E732}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -34,14 +32,6 @@ Global
 		{218A5C84-4C2C-498E-AE79-1BA835B4FB2C}.Release|Any CPU.Deploy.0 = Release|Any CPU
 		{218A5C84-4C2C-498E-AE79-1BA835B4FB2C}.Release|x86.ActiveCfg = Release|x86
 		{218A5C84-4C2C-498E-AE79-1BA835B4FB2C}.Release|x86.Build.0 = Release|x86
-		{D20D2C51-F54B-45EE-937E-EFEA0352E732}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D20D2C51-F54B-45EE-937E-EFEA0352E732}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D20D2C51-F54B-45EE-937E-EFEA0352E732}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{D20D2C51-F54B-45EE-937E-EFEA0352E732}.Debug|x86.Build.0 = Debug|Any CPU
-		{D20D2C51-F54B-45EE-937E-EFEA0352E732}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D20D2C51-F54B-45EE-937E-EFEA0352E732}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D20D2C51-F54B-45EE-937E-EFEA0352E732}.Release|x86.ActiveCfg = Release|Any CPU
-		{D20D2C51-F54B-45EE-937E-EFEA0352E732}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
