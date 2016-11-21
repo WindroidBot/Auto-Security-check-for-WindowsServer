@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplication", "Conso
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchtasksTool", "SchtasksTool\SchtasksTool.csproj", "{218A5C84-4C2C-498E-AE79-1BA835B4FB2C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TEST_DemoDLL", "TEST_DemoDLL\TEST_DemoDLL.csproj", "{5C9AEAB2-6A5C-4BFC-A553-B86B3FBA9A37}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary", "ClassLibrary\ClassLibrary.csproj", "{C7E19AB8-CBF9-4B0D-9C55-104C8E17DEBA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,6 +36,22 @@ Global
 		{218A5C84-4C2C-498E-AE79-1BA835B4FB2C}.Release|Any CPU.Deploy.0 = Release|Any CPU
 		{218A5C84-4C2C-498E-AE79-1BA835B4FB2C}.Release|x86.ActiveCfg = Release|x86
 		{218A5C84-4C2C-498E-AE79-1BA835B4FB2C}.Release|x86.Build.0 = Release|x86
+		{5C9AEAB2-6A5C-4BFC-A553-B86B3FBA9A37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C9AEAB2-6A5C-4BFC-A553-B86B3FBA9A37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C9AEAB2-6A5C-4BFC-A553-B86B3FBA9A37}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{5C9AEAB2-6A5C-4BFC-A553-B86B3FBA9A37}.Debug|x86.Build.0 = Debug|Any CPU
+		{5C9AEAB2-6A5C-4BFC-A553-B86B3FBA9A37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C9AEAB2-6A5C-4BFC-A553-B86B3FBA9A37}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C9AEAB2-6A5C-4BFC-A553-B86B3FBA9A37}.Release|x86.ActiveCfg = Release|Any CPU
+		{5C9AEAB2-6A5C-4BFC-A553-B86B3FBA9A37}.Release|x86.Build.0 = Release|Any CPU
+		{C7E19AB8-CBF9-4B0D-9C55-104C8E17DEBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7E19AB8-CBF9-4B0D-9C55-104C8E17DEBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7E19AB8-CBF9-4B0D-9C55-104C8E17DEBA}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C7E19AB8-CBF9-4B0D-9C55-104C8E17DEBA}.Debug|x86.Build.0 = Debug|Any CPU
+		{C7E19AB8-CBF9-4B0D-9C55-104C8E17DEBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7E19AB8-CBF9-4B0D-9C55-104C8E17DEBA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7E19AB8-CBF9-4B0D-9C55-104C8E17DEBA}.Release|x86.ActiveCfg = Release|Any CPU
+		{C7E19AB8-CBF9-4B0D-9C55-104C8E17DEBA}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
